@@ -1,0 +1,67 @@
+Q1 How do you create a string?
+A  Enclose one (or more) characters between single- or double- quotes
+
+Q2 What are the differences between using single and double quotation marks?
+A  Double-quotes allow the interpolation of php variables, while single-
+   quotes do not.
+
+   For example:
+
+   $x = '$foo' => Assigns the string $foo to the variable 'x'
+   $x = "$foo" => Assigns the value of $foo to the variable 'x'
+
+Q3a What is the concatenation operator?
+A   The . character is the concatentation operation
+
+Q3b What is the concatenation assignment operator?
+A   The sequence .= is the concatenation assignment operator
+
+Q4a What is the impact of having a newline in a string printed to the
+    browser?
+A   There is no impact. The newline is not interpreted in any special
+    manner.
+
+Q4b How do you convert a newline character to a break tag?
+A   Use the php nl2br() function to convert all instances of newlines
+    in a string to break tags.
+
+Q5a What problems can occur when HTML is entered into form elements whose
+    values will later be printed back to the Web browser?
+A   Nasty users can enter javascript and other code that can cause security
+    issues.
+
+    Html sequences can also cause output from the browser to look messy
+    and unprofessional.
+
+Q5b What steps can be taken to sanctify submitted form data?
+A   One can use the htmlspecialchars(), htmlentities() or strip_tags()
+    functions to escape or remove HTML tags from form data.
+
+Q6 What function makes data safe to pass in a URL?
+A  One can use the urlencode function to make data safe in a URL.
+
+   One can also use the htmlspecialchars(), htmlentities() or strip_tags()
+   functions to remove any user-provided HTML tags from data passed as
+   parameters in a URL.
+
+Q7a How do you escape problematic characters within a string?
+A   One can use the urlencode() function to escape problematic characters.
+    For example, urlencode('John Smith') generates 'John+Smith'.
+
+    One can also use the backslash character to escape a double-quote in
+    a string delimited by double-quotes:
+
+    print "<p>\"This is the answer!\"</p>";
+
+Q7b What happens if you do not escape them?
+A   One cannot pass multi-world parameters or other special characters
+    to another script or function without encoding or encrypting them.
+
+    If you do not escape double-quotes within a double-quote delimited
+    string, it can cause unmatched quote issues.
+
+Q8 The characters in a string are indexed beginning at what number?
+A  Characters in a string are indexed beginning at zero.
+
+Q9 What does the trim() function do?
+A  The trim() function removes leading & trailing whitespace from a string.
